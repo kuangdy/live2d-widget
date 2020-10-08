@@ -76,17 +76,18 @@ Font Awesome (v4 or v5) is required for this plugin. Take Font Awesome v4 as an 
 一切正常的话，接下来修改一些配置就行了。（需要通过服务器上的文本编辑器修改；你也可以先在本地完成这一步骤，再上传到服务器上）  
 修改 `autoload.js` 中的常量 `live2d_path` 为 `live2d-widget` 这一目录的 URL。比如说，如果你能够通过
 ```
-https://example.com/path/to/live2d-widget/live2d.min.js
+https://你的地址/live2d-widget/live2d.min.js
 ```
 访问到 `live2d.min.js`，那么就把 `live2d_path` 的值修改为
 ```
-https://example.com/path/to/live2d-widget/
+https://你的地址/live2d-widget/
 ```
 路径末尾的 `/` 一定要加上。具体可以参考 `autoload.js` 内的注释。  
 完成后，在你要添加看板娘的界面加入
 ```xml
-<script src="https://example.com/path/to/live2d-widget/autoload.js"></script>
+<script src="https://你的地址/live2d-widget/autoload.js"></script>
 ```
+这一行代码，一般放到主题页头（header.php）和页脚（footer.php） 的 最后一个</body> 标签之前即可:
 就可以加载了。
 
 ## 后端 API
